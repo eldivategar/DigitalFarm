@@ -12,7 +12,7 @@ LiquidCrystal_I2C lcd(0x27, 20, 4); // Alamat I2C(0x27) LCD dan Jenis LCD
 #include <Servo.h>
 #define D6 12  // Servo 1
 #define D5 14  // Servo 2
-#define D4 2   // Servo 3
+#define D7 13  // Servo 3
 #define D8 15  // Servo 4
 
 Servo servo1;  // create servo object to control a servo
@@ -22,8 +22,8 @@ Servo servo4;  // create servo object to control a servo
 
 
 #define D3 0  // ledIndikator
-#define D7 13 // ledIndikator
-const int ledIndikator = D7;
+#define D4 2  // ledIndikator
+const int ledIndikator = D4;
 
 // Button Pin
 #define btnPin 16 // D0
@@ -64,7 +64,7 @@ void setup() {
   // Servo
   servo1.attach(D6);
   servo2.attach(D5);
-  servo3.attach(D4);
+  servo3.attach(D7);
   servo4.attach(D8);
   
   servo1.write(180);
